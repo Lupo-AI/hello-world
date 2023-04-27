@@ -1,0 +1,21 @@
+/* @theme customtheme */
+
+@import 'default';
+
+/* required for video, do not delete */
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* you can edit from here */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+}

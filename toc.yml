@@ -1,0 +1,20 @@
+name: HelloWorld
+version: v2
+speaker: Aria # en-US: Jenny, Aria, Guy, Davis. en-UK: Abbi, Elliot. es-US: Alonso, Paloma
+captions: false
+transcript: false
+slides: false
+logs: false
+final: false
+email: help@lupo.ai
+chapters:
+  - name: ChapterOne
+    sections:
+      - name: Section_1
+        href: demo/demo.md
+  - name: ChapterTwo
+    sections:
+      - name: Section_2
+        href: demo/demo.md
+      - name: Section_3
+        href: demo/demo.md

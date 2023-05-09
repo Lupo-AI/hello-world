@@ -24,17 +24,90 @@
 		],
 		"description": "Log output to console"
 	},
-	"cover": {
+
+	// LUPO THEME SNIPPETS
+	
+	"slide-cover": {
 		"scope": "markdown",
-		"prefix": "cover",
+		"prefix": "slide-cover",
 		"body": [
-			"![bg](https://w.wallhaven.cc/full/vg/wallhaven-vgvxm5.jpg)",
-			"<!-- _class: cover -->",
+			"<!-- _class: slide-cover -->",
+			"",
 			"# $1",
+			"",
+			"## $2"
+		],
+		"description": "Adds a cover slide"
+	},
+	"slide-agenda": {
+		"scope": "markdown",
+		"prefix": "slide-agenda",
+		"body": [
+			"<!-- _class: slide-agenda -->",
+			"",
+			"# $1",
+			"",
+			"- $2",
+			"- $3",
+			"- $4",
+			"",
+			"![$5]($6)",
+		],
+		"description": "Adds an agenda slide"
+	},
+	"slide-text": {
+		"scope": "markdown",
+		"prefix": "slide-text",
+		"body": [
+			"<!-- _class: slide-text -->",
+			"",
+			"# $1",
+			"",
+			"$2",
+			"",
+			"![$3]($4)",
+		],
+		"description": "Adds a text slide"
+	},
+	"slide-section": {
+		"scope": "markdown",
+		"prefix": "slide-section",
+		"body": [
+			"<!-- _class: slide-section -->",
+			"",
+			"# $1",
+			"",
 			"## $2",
-			"<!-- ",
-			"$3",
-			"-->",
-		]
+			"",
+			"### $3",
+		],
+		"description": "Adds a section slide"
+	},
+	"slide-picture": {
+		"scope": "markdown",
+		"prefix": "slide-picture",
+		"body": [
+			"<!-- _class: slide-picture -->",
+			"",
+			"![bg]($1)",
+			"",
+			"# $2",
+		],
+		"description": "Adds a picture slide"
+	},
+	"slide-thanks": {
+		"scope": "markdown",
+		"prefix": "slide-thanks",
+		"body": [
+			"<!-- _class: slide-thanks -->",
+			"",
+			"# Thanks!",
+			"",
+			"## Do you have any questions?",
+			"",
+			"### help@lupo.ai", 
+			"",
+		],
+		"description": "Adds a thanks slide"
 	}
 }

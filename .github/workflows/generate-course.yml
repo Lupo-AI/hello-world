@@ -6,10 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       token: '${{secrets.LUPO_ACCESS_TOKEN_2023}}'
-      repo: 'Lupo-AI/hello-world'
+      repo: 'lupocps/hello-world'
       branch: 'main'
       repo_private_key: 'HELLO_WORLD_PRIVATE_KEY'
+      actor: ${{ github.actor }}
     steps:
+      - name: Who executes this
+        run: echo $actor
       - uses: actions/checkout@v3
       - name: Run a multi-line script
         run: |
@@ -18,4 +21,4 @@ jobs:
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer $token" \
           https://api.github.com/repos/MLGuru-ai/course-creator/actions/workflows/course-creation.yml/dispatches \
-          -d '{"ref":"main","inputs":{"repo":"'$repo'","branch":"'$branch'","repo_private_key":"'$repo_private_key'"}}'
+          -d '{"ref":"main","inputs":{"repo":"'$repo'","branch":"'$branch'","repo_private_key":"'$repo_private_key'","actor":"'$actor'"}}'

@@ -15,9 +15,9 @@ Welcome to our hello world with Lupo Template!
 
 ---
 
-We recommend using this template for any new project you are starting. <!-- html --> <!-- video -->
+We recommend using this template for any new project you are starting.
 
-Below we explain what it includes. <!-- video -->
+Below we explain what it includes.
 
 <!-- 
 We recommend using this template for any new project you are starting. Below we explain what it includes.

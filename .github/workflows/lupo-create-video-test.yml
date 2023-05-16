@@ -1,6 +1,9 @@
 name: Lupo Create Video Test
 on:
   workflow_dispatch:
+env:
+  GITHUB_ACTOR: 'xmorera'
+  GITHUB_REPOSITORY: 'lupo-showcase'
 jobs:
   build:
     runs-on: ubuntu-latest

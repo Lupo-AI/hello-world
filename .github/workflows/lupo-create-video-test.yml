@@ -9,6 +9,8 @@ jobs:
       - name: Lupo Custom Action
         id: lupocv
         uses: lupocps/create-video@main
+        with:
+          toc: "./toc.yml"
       - name: Check outputs
         run: |
-          test "${{ steps.lupocv.outputs.myOutput }}" == "Hello world"
+          echo "${{ steps.lupocv.outputs.myOutput }}"

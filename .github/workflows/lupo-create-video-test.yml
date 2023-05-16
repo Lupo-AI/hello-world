@@ -1,0 +1,10 @@
+name: Lupo Create Video Test
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lupo Custom Action
+        uses: lupocps/create-video@main

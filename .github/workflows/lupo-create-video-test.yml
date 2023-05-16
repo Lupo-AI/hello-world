@@ -7,4 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Lupo Custom Action
+        id: lupocv
         uses: lupocps/create-video@main
+      - name: Check outputs
+        run: |
+          test "${{ steps.lupocv.outputs.myOutput }}" == "Hello world"

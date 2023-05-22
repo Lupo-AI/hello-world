@@ -10,20 +10,13 @@ jobs:
       branch: 'main'
       actor: ${{ github.actor }}
     steps:
-      - name: Modify the variable
+      - name: Modify the repo variable
         id: modify_variable
         run: |
           modified_variable=$(echo "${{ env.repo }}" | tr '-' '_' | tr '/' '_' | tr '[:lower:]' '[:upper:]')
           modified_variable="${modified_variable}_PRIVATE_KEY"
           echo $modified_variable
           echo "repo_private_key=$modified_variable" >> $GITHUB_ENV
-      - name: Who executes this
-        run: |
-          echo $token
-          echo $repo
-          echo $branch
-          echo $repo_private_key
-          echo $actor
       - uses: actions/checkout@v3
       - name: Run a multi-line script
         run: |

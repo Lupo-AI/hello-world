@@ -8,7 +8,7 @@ jobs:
       token: '${{ secrets.LUPO_ACCESS_TOKEN_2023 }}'
       repo: '${{ github.repository }}'
       branch: 'main'
-      repo_private_key: '${{ repo.replace("/","_").replace("-","_").toUpperCase() }}_PRIVATE_KEY'
+      repo_private_key: '$repo.replace("/","_").replace("-","_").toUpperCase()_PRIVATE_KEY'
       actor: ${{ github.actor }}
     steps:
       - name: Who executes this

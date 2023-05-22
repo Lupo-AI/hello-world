@@ -14,10 +14,8 @@ jobs:
       - name: Modify the variable
         id: modify_variable
         run: |
-          # Replace '-' with '_' and convert to uppercase
           modified_variable=$(echo "${{ env.repo }}" | tr '-' '_' | tr '[:lower:]' '[:upper:]')
-          modified_variable="${modified_variable}_PRIVATE_KEY"
-          echo "::set-output name=repo_private_key::$modified_variable"
+          echo "{repo_private_key}={modified_variable}" >> $GITHUB_STATE
       - name: Who executes this
         run: |
           echo $token

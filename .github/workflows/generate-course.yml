@@ -8,11 +8,16 @@ jobs:
       token: '${{ secrets.LUPO_ACCESS_TOKEN_2023 }}'
       repo: '${{ github.repository }}'
       branch: 'main'
-      repo_private_key: '$repo.replace("/","_").replace("-","_").toUpperCase()_PRIVATE_KEY'
+      repo_private_key: '${{ repo.replace("/","_").replace("-","_").toUpperCase() }}_PRIVATE_KEY'
       actor: ${{ github.actor }}
     steps:
       - name: Who executes this
-        run: echo $actor
+        run: |
+          echo $token
+          echo $repo
+          echo $branch
+          echo $repo_private_key
+          echo $actor
       - uses: actions/checkout@v3
       - name: Run a multi-line script
         run: |

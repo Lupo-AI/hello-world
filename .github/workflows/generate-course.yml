@@ -16,13 +16,13 @@ jobs:
           modified_variable=$(echo "${{ env.repo }}" | tr '-' '_' | tr '/' '_' | tr '[:lower:]' '[:upper:]')
           modified_variable="${modified_variable}_PRIVATE_KEY"
           echo $modified_variable
-          echo "repo_private_key=$modified_variable" >> $GITHUB_OUTPUT
+          echo "repo_private_key=$modified_variable" >> $GITHUB_ENV
       - name: Who executes this
         run: |
           echo $token
           echo $repo
           echo $branch
-          echo ${{ needs.modify_variable.outputs.repo_private_key }}
+          echo $repo_private_key
           echo $actor
       - uses: actions/checkout@v3
       - name: Run a multi-line script
@@ -32,4 +32,4 @@ jobs:
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer $token" \
           https://api.github.com/repos/MLGuru-ai/course-creator/actions/workflows/course-creation-v2.yml/dispatches \
-          -d '{"ref":"main","inputs":{"repo":"'$repo'","branch":"'$branch'","repo_private_key":"'${{ needs.modify_variable.outputs.repo_private_key }}'","actor":"'$actor'"}}'
+          -d '{"ref":"main","inputs":{"repo":"'$repo'","branch":"'$branch'","repo_private_key":"'$repo_private_key'","actor":"'$actor'"}}'

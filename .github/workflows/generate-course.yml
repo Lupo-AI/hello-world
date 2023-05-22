@@ -5,10 +5,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      token: '${{secrets.LUPO_ACCESS_TOKEN_2023}}'
-      repo: 'lupocps/hello-world'
+      token: '${{ secrets.LUPO_ACCESS_TOKEN_2023 }}'
+      repo: '${{ github.repository }}'
       branch: 'main'
-      repo_private_key: 'HELLO_WORLD_PRIVATE_KEY'
+      repo_private_key: '$repo.replace("/","_").replace("-","_").toUpperCase()_PRIVATE_KEY'
       actor: ${{ github.actor }}
     steps:
       - name: Who executes this
@@ -20,5 +20,5 @@ jobs:
           -X POST \
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer $token" \
-          https://api.github.com/repos/MLGuru-ai/course-creator/actions/workflows/course-creation.yml/dispatches \
+          https://api.github.com/repos/MLGuru-ai/course-creator/actions/workflows/course-creation-v2.yml/dispatches \
           -d '{"ref":"main","inputs":{"repo":"'$repo'","branch":"'$branch'","repo_private_key":"'$repo_private_key'","actor":"'$actor'"}}'

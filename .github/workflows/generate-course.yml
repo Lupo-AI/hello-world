@@ -15,8 +15,9 @@ jobs:
         id: modify_variable
         run: |
           modified_variable=$(echo "${{ env.repo }}" | tr '-' '_' | tr '/' '_' | tr '[:lower:]' '[:upper:]')
+          modified_variable = "${modified_variable}_PRIVATE_KEY"
           echo $modified_variable
-          echo 'repo_private_key="'$modified_variable'"' >> $GITHUB_OUTPUT
+          echo "repo_private_key=${modified_variable}" >> $GITHUB_OUTPUT
       - name: Who executes this
         run: |
           echo $token

@@ -5,14 +5,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      token: '${{secrets.LUPO_ACCESS_TOKEN_2023}}'
+      token: '${{ secrets.LUPO_ACCESS_TOKEN_2023 }}'
       repo: '${{ github.repository }}'
       branch: 'main'
-      repo_private_key: '${{ env.repo.replace('/', '_').toUpperCase() }}_PRIVATE_KEY'
       actor: ${{ github.actor }}
     steps:
-      - name: Who executes this
-        run: echo $actor
+      - name: Modify the repo variable
+        id: modify_variable
+        run: |
+          modified_variable=$(echo "${{ env.repo }}" | tr '-' '_' | tr '/' '_' | tr '[:lower:]' '[:upper:]')
+          modified_variable="${modified_variable}_PRIVATE_KEY"
+          echo $modified_variable
+          echo "repo_private_key=$modified_variable" >> $GITHUB_ENV
       - uses: actions/checkout@v3
       - name: Run a multi-line script
         run: |
@@ -20,5 +24,5 @@ jobs:
           -X POST \
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer $token" \
-          https://api.github.com/repos/MLGuru-ai/course-creator/actions/workflows/course-creation.yml/dispatches \
+          https://api.github.com/repos/MLGuru-ai/course-creator/actions/workflows/course-creation-v2.yml/dispatches \
           -d '{"ref":"main","inputs":{"repo":"'$repo'","branch":"'$branch'","repo_private_key":"'$repo_private_key'","actor":"'$actor'"}}'

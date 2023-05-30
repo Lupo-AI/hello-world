@@ -1,6 +1,6 @@
-name: HelloWorld
-version: v2
-speaker: Aria # en-US: Jenny, Aria, Guy, Davis. en-UK: Abbi, Elliot. es-US: Alonso, Paloma
+name: {{ PROJECT_NAME }}
+version: v1
+speaker: Aria
 captions: false
 transcript: false
 slides: false

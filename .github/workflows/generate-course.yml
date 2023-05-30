@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       token: '${{secrets.LUPO_ACCESS_TOKEN_2023}}'
-      repo: 'lupocps/hello-world'
+      repo: '${{ github.repository }}'
       branch: 'main'
-      repo_private_key: 'HELLO_WORLD_PRIVATE_KEY'
+      repo_private_key: '${{ env.repo.replace('/', '_').toUpperCase() }}_PRIVATE_KEY'
       actor: ${{ github.actor }}
     steps:
       - name: Who executes this

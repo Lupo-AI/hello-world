@@ -1,4 +1,4 @@
-name: {{ PROJECT_NAME }}
+name: ProjectName
 version: v1
 speaker: Aria
 captions: false

@@ -10,11 +10,5 @@ email: help@lupo.ai
 chapters:
   - name: ChapterOne
     sections:
-      - name: Section_1
-        href: templates/template1.md
-  - name: ChapterTwo
-    sections:
-      - name: Section_2
-        href: templates/template2.md
-      - name: Section_3
-        href: templates/template2.md
+      - name: Demo1
+        href: demo/demo.md

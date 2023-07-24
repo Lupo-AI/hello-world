@@ -4,11 +4,9 @@ speaker: Aria
 captions: false
 transcript: false
 slides: false
-logs: false
-final: false
 email: help@lupo.ai
 chapters:
-  - name: ChapterOne
+  - name: Sample Chapter
     sections:
-      - name: Demo1
-        href: demo/demo.md
+      - name: Sample Section
+        href: sample/sample.md

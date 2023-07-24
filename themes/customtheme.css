@@ -12,32 +12,3 @@ video {
 }
 
 /* you can edit from here */
-
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 60px;
-}
-
-section {
-    background-color: #999999;
-}
-
-section.title h1 {
-    color: #999999;
-    text-align: center;
-    position: relative;
-    top: 40%;
-}
-
-section.title h2 {
-    color: #999999;
-    text-align: center;
-    position: relative;
-    top: 35%;
-}
-
-section.typography p {
-    color: aliceblue;
-}

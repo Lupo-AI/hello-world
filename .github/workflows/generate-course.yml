@@ -1,28 +1,16 @@
-name: Generate Course
+name: Generate Course with Lupo (Latest)
 on:
   workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      token: '${{ secrets.LUPO_ACCESS_TOKEN_2023 }}'
-      repo: '${{ github.repository }}'
-      branch: 'main'
-      actor: ${{ github.actor }}
     steps:
-      - name: Modify the repo variable
-        id: modify_variable
+      - name: Execute Lupo Action
         run: |
-          modified_variable=$(echo "${{ env.repo }}" | tr '-' '_' | tr '/' '_' | tr '[:lower:]' '[:upper:]')
-          modified_variable="${modified_variable}_PRIVATE_KEY"
-          echo $modified_variable
-          echo "repo_private_key=$modified_variable" >> $GITHUB_ENV
-      - uses: actions/checkout@v3
-      - name: Run a multi-line script
-        run: |
-          curl \
-          -X POST \
-          -H "Accept: application/vnd.github+json" \
-          -H "Authorization: Bearer $token" \
-          https://api.github.com/repos/MLGuru-ai/course-creator/actions/workflows/course-creation-v2.yml/dispatches \
-          -d '{"ref":"main","inputs":{"repo":"'$repo'","branch":"'$branch'","repo_private_key":"'$repo_private_key'","actor":"'$actor'"}}'
+          curl -L -X POST http://20.55.39.142:5000/api/action \
+          -H "Content-Type: application/json" \
+          -d '{"repo":"'$repo'","branch":"'$branch'","actor":"'$actor'"}'
+        env:
+          repo: ${{ github.repository }}
+          branch: ${{ github.ref }}
+          actor: ${{ github.actor }}

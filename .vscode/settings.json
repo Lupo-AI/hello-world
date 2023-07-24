@@ -1,7 +1,6 @@
 {
     "markdown.marp.enableHtml": true,
     "markdown.marp.themes": [
-        "./themes/customtheme.css",
-        "./themes/lupo.css"
+        "./themes/customtheme.css"
     ]
 }

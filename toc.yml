@@ -7,7 +7,3 @@ chapters:
     sections:
       - name: Sample Section
         href: sample/sample.md
-  - name: Another Chapter
-    sections:
-      - name: Another Section
-        href: myslides/myslides.md

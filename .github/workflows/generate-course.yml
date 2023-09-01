@@ -1,4 +1,4 @@
-name: Generate Course with Lupo (Latest)
+name: Generate Course with Lupo
 on:
   workflow_dispatch:
 jobs:

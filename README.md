@@ -1,10 +1,10 @@
 # Hello World Template
 
-We provide this template with the minimum requiremts for lupo to generate your custom videos.
+We provide this template with the minimum requirements for lupo to generate your custom videos.
 
-Please feel free to modify it and adapt to your needs. 
+Please feel free to modify it and adapt it to your needs. 
 
-If you need help do not hesitate to contact us, we will be more than happy to help our customers and adapt our product to their needs.
+If you need help, do not hesitate to contact us. We will be more than happy to help our customers and adapt our product to your needs.
 
 ## What is included:
 

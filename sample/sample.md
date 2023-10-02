@@ -32,15 +32,6 @@ We recommend using this template for any new project you are starting. Below we 
 Tell me and I forget, teach me and I may remember, involve me and I learn.
 -->
 
---- 
-
-<video src="fix_accenture_bug.mp4" controls>
-entre 2 slides
-
-<!-- 
-((7)) Nothing to see here, just a video!
--->
-
 ---
 
 <video src="https://lupostorageaccount.blob.core.windows.net/media/samples/niagara_falls.mp4" autoplay loop muted>

@@ -5,5 +5,7 @@ email: help@lupo.ai
 chapters:
   - name: Sample Chapter
     sections:
-      - name: Sample Section
-        href: sample/sample.md
+      - name: Lupo Demo Local pptx
+        href-pptx: sample/lupo.pptx # Local
+      #- name: Lupo Demo Remote pptx
+      #  href-pptx: URL

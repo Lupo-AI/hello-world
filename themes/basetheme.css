@@ -1,0 +1,513 @@
+/* @theme basetheme */
+
+@import 'default';
+
+/* required for video, do not delete */
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+img {
+    background-color: transparent !important;
+    object-fit: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* TRY TO REMOVE THIS */
+
+h1,
+h2,
+h3,
+p,
+li {
+    /* background-color: #06d69e4b; */
+}
+
+h1 {
+    font-family: var(--primary-font);
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 120%;
+    color: var(--main-text);
+    text-align: center;
+}
+
+h2,
+h3 {
+    font-family: var(--secondary-font);
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 80%;
+    color: var(--main-text);
+    text-align: center;
+}
+
+p {
+    font-family: var(--secondary-font);
+    font-size: 30px;
+    line-height: 100%;
+    color: var(--main-text);
+}
+
+li {
+    font-family: var(--secondary-font);
+    font-size: 30px;
+    line-height: 100%;
+    color: var(--main-text);
+}
+
+code {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-style: none;
+
+    font-family: var(--code-font);
+    font-size: 30px;
+    color: var(--main-accent);
+    line-height: 100%;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+pre {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-style: none;
+}
+
+pre code {
+    font-family: var(--code-font);
+    font-size: 30px;
+    color: var(--dark-accent);
+    line-height: 100%;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+a {
+    color: var(--main-accent);
+}
+
+footer {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    padding-left: 32px;
+
+    font-family: var(--primary-font);
+    font-size: 8pt;
+    text-align: left;
+    font-weight: 600;
+
+    height: 29px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+header {
+    color: var(--main-accent);
+
+    position: absolute;
+    top: 14px;
+    left: 1174px;
+
+    width: 87px;
+}
+
+ornamentH {
+    background-color: var(--main-accent);
+
+    height: 2px;
+
+    position: fixed;
+    left: 66px;
+    right: 66px;
+    top: 136px;
+}
+
+ornamentV {
+    background-color: var(--main-accent);
+
+    width: 2px;
+    height: 625px;
+
+    position: fixed;
+    left: 491px;
+    top: 49px;
+}
+
+halfc {
+    background-color: var(--main-accent);
+
+    position: fixed;
+    left: 640px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+
+
+
+/* you can edit from here */
+
+/* Replace with your font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Replace with your font and colors */
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Nunito', sans-serif;
+    --code-font: 'Roboto Mono', monospace;
+
+    --main-background: #FFFFFF;
+    --main-text: #333333;
+    --main-accent: #CCCCCC;
+    --dark-background: #333333;
+    --dark-text: #CCCCCC;
+    --dark-accent: #666666;
+}
+
+
+
+
+
+/* TEST COLORS */
+section.slide-test-colors left {
+    background-color: var(--main-background);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 50%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+section.slide-test-colors left h1 {
+    background-color: #ffffff00;
+    color: var(--main-text);
+}
+
+section.slide-test-colors left h2 {
+    background-color: #ffffff00;
+    color: var(--main-accent);
+}
+
+section.slide-test-colors right {
+    background-color: var(--dark-background);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    width: 50%;
+    height: 100%;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+section.slide-test-colors right h1 {
+    background-color: #ffffff00;
+    color: var(--dark-text);
+}
+
+section.slide-test-colors right h2 {
+    background-color: #ffffff00;
+    color: var(--dark-accent);
+}
+
+
+
+
+
+/* 1. INTRO SLIDE 1 */
+section.slide-cover {
+    background-color: var(--dark-background);
+}
+
+section.slide-cover img:not(header img) {
+    width: 350px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.slide-cover h1 {
+    color: var(--dark-text);
+    font-size: 40pt;
+    width: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+    top: 50px;
+}
+
+section.slide-cover h2 {
+    color: var(--dark-text);
+    font-size: 34pt;
+    width: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+    top: 10px;
+}
+
+section.slide-cover footer {
+    background-color: var(--dark-accent);
+    color: var(--dark-text);
+}
+
+/* ::after is page number */
+section.slide-cover::after {
+    color: var(--dark-text);
+}
+
+section.slide-cover a {
+    color: var(--dark-accent);
+
+}
+
+
+
+
+
+/* 2. TITLE OR IMAGE 1/3 LEFT, CONTENT 2/3 RIGHT */
+section.slide-LR divline {
+    background-color: var(--light-color);
+
+    width: 2px;
+    height: 625px;
+    position: fixed;
+
+    top: 49px;
+    left: 491px;
+}
+
+section.slide-LR left {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+
+    width: 395px;
+    height: 625px;
+    position: fixed;
+    top: 49px;
+    left: 66px;
+}
+
+section.slide-LR right {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+    width: 691px;
+    height: 511px;
+    position: fixed;
+    top: 106px;
+    right: 66px;
+}
+
+section.slide-LR img:not(header img) {
+    order: -1;
+    width: 200px;
+}
+
+section.slide-LR h1 {
+    text-align: right;
+    margin-right: 30px;
+}
+
+
+
+
+
+/* 3. DEFINITION: HEADER, SUBTITLE, CONTENT */
+section.slide-quote {
+    background-color: var(--dark-background);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+section.slide-quote h1 {
+    text-align: left;
+    font-size: 36pt;
+    color: var(--dark-text);
+
+    position: relative;
+    left: 40px;
+}
+
+section.slide-quote h2 {
+    text-align: left;
+    font-size: 32pt;
+    color: var(--dark-text);
+
+    position: relative;
+    top: -35px;
+    left: 40px;
+}
+
+section.slide-quote p {
+    text-align: left;
+    font-size: 22pt;
+    line-height: 120%;
+    font-weight: bold;
+    color: var(--dark-text);
+
+    position: relative;
+    top: -25px;
+    left: 40px;
+}
+
+
+
+
+
+/* 4. HEADER AND CONTENT (CAN BE IMAGES, TEXT, BULLETS) */
+section.slide-h1imgs h1 {
+    width: 1082px;
+    height: 120px;
+
+    position: fixed;
+    left: 88px;
+    top: 38px;
+
+    display: flex;
+    align-items: center;
+}
+
+section.slide-h1imgs divline {
+    background-color: var(--main-accent);
+
+    height: 2px;
+    position: fixed;
+
+    top: 135px;
+    left: 66px;
+    right: 66px;
+}
+
+section.slide-h1imgs contentarea {
+    display: flex;
+    flex-direction: column;
+    align-items: start ;
+    justify-content: center;
+
+    height: 511px;
+    width: 1082px;
+    position: fixed;
+    top: 156px;
+    left: 66px;
+    right: 66px;
+}
+
+
+
+
+
+/* 5. BACKGROUND IMAGE WITH OVERLAY */
+section.slide-image p {
+    background-color: rgba(255, 255, 255, 0.8);
+
+    border-left: 8px solid var(--dark-accent);
+
+    padding-left: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    width: 900px;
+    height: 150px;
+
+    position: absolute;
+    top: 480px;
+    left: 330px;
+}
+
+
+
+
+
+/* 6. OUTRO SLIDE 1 */
+section.slide-thanks {
+    background-color: var(--dark-background);
+}
+
+section.slide-thanks h1 {
+    color: var(--dark-text);
+}
+
+section.slide-thanks h2 {
+    color: var(--dark-text);
+}
+
+section.slide-thanks a {
+    color: var(--dark-text);
+}
+
+
+
+
+
+/* 7. VIDEO SLIDE */
+section.slide-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom center;
+}
+
+section.slide-video p {
+    background-color: rgba(255, 255, 255, 0.8);
+
+    border-left: 8px solid var(--dark-accent);
+
+    padding-left: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    width: 900px;
+    height: 150px;
+
+    position: absolute;
+    top: 480px;
+    left: 330px;
+}

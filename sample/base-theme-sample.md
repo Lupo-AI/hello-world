@@ -49,7 +49,7 @@ Narration
 
 
 
-<!-- _class: slide-LR -->
+<!-- _class: slide-onethirdleft-twothirdsright -->
 
 <left>
 
@@ -57,7 +57,7 @@ Narration
 
 </left>
 
-<ornamentV> </ornamentV>
+<divline> </divline>
 
 <right>
 
@@ -82,7 +82,48 @@ Narration
 
 
 
-<!-- _class: slide-quote 
+<!-- _class: slide-header-onethirdleft-twothirdsright -->
+
+# Title Or Image 1/3 Left, Content 2/3 Right
+
+<left>
+
+- Here you can add:
+    - Bullet points
+    - Simple text
+    - Images
+
+This is text
+
+![w:180px](media/image.png)
+
+</left>
+
+<divline> </divline>
+
+<right>
+
+- Here you can add:
+    - Bullet points
+    - Simple text
+    - Images
+
+This is text
+
+![w:180px](media/image.png)
+
+</right>
+
+<!-- 
+Narration
+-->
+
+
+
+---
+
+
+<!-- _class: slide-definition 
 _header: '![lupo](media/logo-light.png)' -->
 
 # Definition: Header, Subtitle, Content
@@ -101,7 +142,7 @@ Narration
 
 
 
-<!-- _class: slide-h1imgs -->
+<!-- _class: slide-header-content -->
 
 <h1 style="font-size: 48px"> Header And Content (Images, Text, Bullets) </h1>
 
@@ -125,17 +166,45 @@ Narration
 -->
 
 
+---
+
+<!-- _class: slide-header-subheader-content -->
+
+<h1 style="font-size: 48px"> Header And Content (Images, Text, Bullets) </h1>
+
+## Subheader
+
+<contentarea>
+
+- Here you can add:
+    - Bullet points
+    - Simple text
+    - Images
+
+This is text
+
+![w:180px](media/lupo-dark.png)
+
+</contentarea>
+
+<!-- 
+Narration
+-->
 
 ---
 
 
 
-<!-- _class: slide-image 
+<!-- _class: slide-image-rightnote 
 _header: "" -->
 
 ![bg](https://mlgstorageaccount.blob.core.windows.net/media/things/making-photo-or-video-with-pad-of-old-street-in-tallinn-SBI-300935031.jpg)
 
+<box>
+
 Background Image with Overlay
+
+</box>
 
 <!-- 
 Narration
@@ -145,6 +214,26 @@ Narration
 
 ---
 
+
+
+<!-- _class: slide-image-centerednote 
+_header: "" -->
+
+![bg](https://mlgstorageaccount.blob.core.windows.net/media/things/making-photo-or-video-with-pad-of-old-street-in-tallinn-SBI-300935031.jpg)
+
+<box>
+
+Background Image with Overlay
+
+</box>
+
+<!-- 
+Narration
+-->
+
+
+
+---
 
 
 <!-- _class: slide-thanks 
@@ -177,3 +266,6 @@ Background Video with Overlay
 <!-- 
 Narration
 -->
+
+---
+

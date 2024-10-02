@@ -14,52 +14,60 @@ video {
 img {
     background-color: transparent !important;
     object-fit: cover;
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* you can edit from here */
+/* Replace with your font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
 
-h1,
-h2,
-h3,
-p,
-li {
-    /* background-color: #06d69e4b; */
+/* Replace with your font and colors */
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Nunito', sans-serif;
+    --code-font: 'Roboto Mono', monospace;
+
+    --lightmode-background: #FFFFFF;
+    --lightmode-text: #333333;
+    --lightmode-accent: #CCCCCC;
+    --darkmode-background: #333333;
+    --darkmode-text: #CCCCCC;
+    --darkmode-accent: #666666;
 }
 
 h1 {
     font-family: var(--primary-font);
-    font-size: 50px;
+    font-size: 48px;
     font-weight: 700;
     line-height: 120%;
-    color: var(--main-text);
+    color: var(--lightmode-text);
     text-align: center;
 }
 
 h2,
 h3 {
     font-family: var(--secondary-font);
-    font-size: 60px;
+    font-size: 44px;
     font-weight: 400;
     line-height: 80%;
-    color: var(--main-text);
+    color: var(--lightmode-text);
     text-align: center;
 }
 
 p {
     font-family: var(--secondary-font);
-    font-size: 30px;
+    font-size: 24px;
     line-height: 100%;
-    color: var(--main-text);
+    color: var(--lightmode-text);
 }
 
 li {
     font-family: var(--secondary-font);
-    font-size: 30px;
+    font-size: 24px;
     line-height: 100%;
-    color: var(--main-text);
+    color: var(--lightmode-text);
 }
 
 code {
@@ -67,8 +75,8 @@ code {
     border-style: none;
 
     font-family: var(--code-font);
-    font-size: 30px;
-    color: var(--main-accent);
+    font-size: 24px;
+    color: var(--lightmode-accent);
     line-height: 100%;
     border-radius: 4px;
     overflow-x: auto;
@@ -81,20 +89,26 @@ pre {
 
 pre code {
     font-family: var(--code-font);
-    font-size: 30px;
-    color: var(--dark-accent);
+    font-size: 24px;
+    color: var(--darkmode-accent);
     line-height: 100%;
     border-radius: 4px;
     overflow-x: auto;
+
+    width: 100%;
+}
+
+codetext {
+    width: 100%;
 }
 
 a {
-    color: var(--main-accent);
+    color: var(--lightmode-accent);
 }
 
 footer {
-    background-color: var(--dark-background);
-    color: var(--dark-text);
+    background-color: var(--darkmode-background);
+    color: var(--darkmode-text);
 
     display: flex;
     flex-direction: row;
@@ -122,7 +136,7 @@ header {
     align-items: center;
     justify-content: right;
 
-    color: var(--main-accent);
+    color: var(--lightmode-accent);
 
     position: absolute;
     top: 14px;
@@ -135,12 +149,12 @@ header p {
     display: flex;
     flex-direction: row;
 
-    color: var(--main-accent);
+    color: var(--lightmode-accent);
 }
 
 /* ::after is page number */
 section::after {
-    color: var(--main-accent);
+    color: var(--lightmode-accent);
 
     font-family: var(--primary-font);
     font-weight: 700;
@@ -155,7 +169,7 @@ section::after {
 }
 
 ornamentH {
-    background-color: var(--main-accent);
+    background-color: var(--lightmode-accent);
 
     height: 2px;
 
@@ -166,7 +180,7 @@ ornamentH {
 }
 
 ornamentV {
-    background-color: var(--main-accent);
+    background-color: var(--lightmode-accent);
 
     width: 2px;
     height: 625px;
@@ -177,7 +191,7 @@ ornamentV {
 }
 
 halfc {
-    background-color: var(--main-accent);
+    background-color: var(--lightmode-accent);
 
     position: fixed;
     left: 640px;
@@ -189,32 +203,14 @@ halfc {
 
 
 
-/* you can edit from here */
-
-/* Replace with your font */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
-
-/* Replace with your font and colors */
-:root {
-    --primary-font: 'Poppins', sans-serif;
-    --secondary-font: 'Nunito', sans-serif;
-    --code-font: 'Roboto Mono', monospace;
-
-    --main-background: #FFFFFF;
-    --main-text: #333333;
-    --main-accent: #CCCCCC;
-    --dark-background: #333333;
-    --dark-text: #CCCCCC;
-    --dark-accent: #666666;
-}
 
 
 
 
 
-/* TEST COLORS */
+/* 0. TEST COLORS */
 section.slide-test-colors left {
-    background-color: var(--main-background);
+    background-color: var(--lightmode-background);
 
     display: flex;
     flex-direction: column;
@@ -232,16 +228,16 @@ section.slide-test-colors left {
 
 section.slide-test-colors left h1 {
     background-color: #ffffff00;
-    color: var(--main-text);
+    color: var(--lightmode-text);
 }
 
 section.slide-test-colors left h2 {
     background-color: #ffffff00;
-    color: var(--main-accent);
+    color: var(--lightmode-accent);
 }
 
 section.slide-test-colors right {
-    background-color: var(--dark-background);
+    background-color: var(--darkmode-background);
 
     display: flex;
     flex-direction: column;
@@ -259,12 +255,12 @@ section.slide-test-colors right {
 
 section.slide-test-colors right h1 {
     background-color: #ffffff00;
-    color: var(--dark-text);
+    color: var(--darkmode-text);
 }
 
 section.slide-test-colors right h2 {
     background-color: #ffffff00;
-    color: var(--dark-accent);
+    color: var(--darkmode-accent);
 }
 
 
@@ -273,7 +269,7 @@ section.slide-test-colors right h2 {
 
 /* 1. INTRO SLIDE 1 */
 section.slide-cover {
-    background-color: var(--dark-background);
+    background-color: var(--darkmode-background);
 }
 
 section.slide-cover img:not(header img) {
@@ -284,7 +280,7 @@ section.slide-cover img:not(header img) {
 }
 
 section.slide-cover h1 {
-    color: var(--dark-text);
+    color: var(--darkmode-text);
     font-size: 40pt;
     width: 800px;
 
@@ -296,7 +292,7 @@ section.slide-cover h1 {
 }
 
 section.slide-cover h2 {
-    color: var(--dark-text);
+    color: var(--darkmode-text);
     font-size: 34pt;
     width: 800px;
 
@@ -308,26 +304,26 @@ section.slide-cover h2 {
 }
 
 section.slide-cover footer {
-    background-color: var(--dark-accent);
-    color: var(--dark-text);
+    background-color: var(--darkmode-accent);
+    color: var(--darkmode-text);
 }
 
 /* ::after is page number */
 section.slide-cover::after {
-    color: var(--dark-text);
+    color: var(--darkmode-text);
 }
 
 section.slide-cover a {
-    color: var(--dark-accent);
+    color: var(--darkmode-accent);
 }
 
 
 
 
 
-/* 2. TITLE OR IMAGE 1/3 LEFT, CONTENT 2/3 RIGHT */
-section.slide-LR divline {
-    background-color: var(--light-color);
+/* 2.1 TITLE OR IMAGE 1/3 LEFT, CONTENT 2/3 RIGHT */
+section.slide-onethirdleft-twothirdsright divline {
+    background-color: var(--lightmode-accent);
 
     width: 2px;
     height: 625px;
@@ -337,10 +333,13 @@ section.slide-LR divline {
     left: 491px;
 }
 
-section.slide-LR left {
+section.slide-onethirdleft-twothirdsright left {
+    background-color: aqua;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
     text-align: right;
 
     width: 395px;
@@ -350,25 +349,27 @@ section.slide-LR left {
     left: 66px;
 }
 
-section.slide-LR right {
+section.slide-onethirdleft-twothirdsright right {
+    background-color: aqua;
+
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
 
     width: 691px;
-    height: 511px;
+    height: 625px;
     position: fixed;
-    top: 106px;
+    top: 49px;
     right: 66px;
 }
 
-section.slide-LR img:not(header img) {
+section.slide-onethirdleft-twothirdsright img:not(header img) {
     order: -1;
     width: 200px;
 }
 
-section.slide-LR h1 {
+section.slide-onethirdleft-twothirdsright h1 {
     text-align: right;
     margin-right: 30px;
 }
@@ -377,57 +378,8 @@ section.slide-LR h1 {
 
 
 
-/* 3. DEFINITION: HEADER, SUBTITLE, CONTENT */
-section.slide-quote {
-    background-color: var(--dark-background);
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-}
-
-section.slide-quote h1 {
-    text-align: left;
-    font-size: 36pt;
-    color: var(--dark-text);
-
-    position: relative;
-    left: 40px;
-}
-
-section.slide-quote h2 {
-    text-align: left;
-    font-size: 32pt;
-    color: var(--dark-text);
-
-    position: relative;
-    top: -35px;
-    left: 40px;
-}
-
-section.slide-quote p {
-    text-align: left;
-    font-size: 22pt;
-    line-height: 120%;
-    font-weight: bold;
-    color: var(--dark-text);
-
-    position: relative;
-    top: -25px;
-    left: 40px;
-}
-
-section.slide-quote footer {
-    background-color: var(--dark-accent);
-    color: var(--dark-text);
-}
-
-
-
-
-
-/* 4. HEADER AND CONTENT (CAN BE IMAGES, TEXT, BULLETS) */
-section.slide-h1imgs h1 {
+/* 2.2 HEADER, CONTENT 1/3 LEFT, CONTENT 2/3 RIGHT */
+section.slide-header-onethirdleft-twothirdsright h1 {
     width: 1082px;
     height: 120px;
 
@@ -439,8 +391,179 @@ section.slide-h1imgs h1 {
     align-items: center;
 }
 
-section.slide-h1imgs divline {
-    background-color: var(--main-accent);
+section.slide-header-onethirdleft-twothirdsright divline {
+    background-color: var(--lightmode-accent);
+
+    width: 2px;
+    height: 511px;
+    position: fixed;
+
+    top: 156px;
+    left: 491px;
+}
+
+section.slide-header-onethirdleft-twothirdsright left {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    text-align: right;
+
+    width: 395px;
+    height: 511px;
+    position: fixed;
+    top: 156px;
+    left: 66px;
+}
+
+section.slide-header-onethirdleft-twothirdsright right {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+    width: 691px;
+    height: 511px;
+    position: fixed;
+    top: 156px;
+    right: 66px;
+}
+
+section.slide-header-onethirdleft-twothirdsright img:not(header img) {
+    order: -1;
+    width: 200px;
+}
+
+
+
+
+
+
+
+/* 2.2 HEADER, HALF LEFT, HALF RIGHT */
+section.slide-header-halfleft-halfright h1 {
+    width: 1082px;
+    height: 120px;
+
+    position: fixed;
+    left: 88px;
+    top: 38px;
+
+    display: flex;
+    align-items: center;
+}
+
+section.slide-header-halfleft-halfright divline {
+    background-color: var(--lightmode-accent);
+
+    width: 2px;
+    height: 511px;
+    position: fixed;
+
+    top: 156px;
+    left: 639px;
+}
+
+section.slide-header-halfleft-halfright left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+
+    width: 543px;
+    height: 511px;
+    position: fixed;
+    top: 156px;
+    left: 66px;
+}
+
+section.slide-header-halfleft-halfright right {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+    width: 543px;
+    height: 511px;
+    position: fixed;
+    top: 156px;
+    right: 66px;
+}
+
+section.slide-header-halfleft-halfright img:not(header img) {
+    order: -1;
+    width: 200px;
+}
+
+
+
+
+
+/* 3. DEFINITION: HEADER, SUBTITLE, CONTENT */
+section.slide-definition {
+    background-color: var(--darkmode-background);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+section.slide-definition h1 {
+    text-align: left;
+    font-size: 36pt;
+    color: var(--darkmode-text);
+
+    position: relative;
+    left: 40px;
+}
+
+section.slide-definition h2 {
+    text-align: left;
+    font-size: 32pt;
+    color: var(--darkmode-text);
+
+    position: relative;
+    top: -35px;
+    left: 40px;
+}
+
+section.slide-definition p {
+    text-align: left;
+    font-size: 22pt;
+    line-height: 120%;
+    font-weight: bold;
+    color: var(--darkmode-text);
+
+    position: relative;
+    top: -25px;
+    left: 40px;
+}
+
+section.slide-definition footer {
+    background-color: var(--darkmode-accent);
+    color: var(--darkmode-text);
+}
+
+
+
+
+
+/* 4. HEADER AND CONTENT (CAN BE IMAGES, TEXT, BULLETS) */
+section.slide-header-content h1 {
+    width: 1082px;
+    height: 120px;
+
+    position: fixed;
+    left: 88px;
+    top: 38px;
+
+    display: flex;
+    align-items: center;
+}
+
+section.slide-header-content divline {
+    background-color: var(--lightmode-accent);
 
     height: 2px;
     position: fixed;
@@ -450,7 +573,7 @@ section.slide-h1imgs divline {
     right: 66px;
 }
 
-section.slide-h1imgs contentarea {
+section.slide-header-content contentarea {
     display: flex;
     flex-direction: column;
     align-items: start ;
@@ -468,24 +591,128 @@ section.slide-h1imgs contentarea {
 
 
 
-/* 5. BACKGROUND IMAGE WITH OVERLAY */
-section.slide-image p {
-    background-color: rgba(255, 255, 255, 0.8);
+/* 4.2 HEADER SUBHEADER AND CONTENT (CAN BE IMAGES, TEXT, BULLETS) */
+section.slide-header-subheader-content h1 {
+    width: 1082px;
+    height: 60px;
 
-    border-left: 8px solid var(--dark-accent);
+    position: fixed;
+    left: 88px;
+    top: 38px;
+
+    text-align: left;
+}
+
+section.slide-header-subheader-content h2 {
+    font-size: 34px;
+    font-weight: 800;
+    width: 1082px;
+    height: 60px;
+
+    position: fixed;
+    left: 88px;
+    top: 90px;
+
+    text-align: left;
+}
+
+section.slide-header-subheader-content divline {
+    background-color: var(--lightmode-accent);
+
+    height: 2px;
+    position: fixed;
+
+    top: 135px;
+    left: 66px;
+    right: 66px;
+}
+
+section.slide-header-subheader-content contentarea {
+    display: flex;
+    flex-direction: column;
+    align-items: start ;
+    justify-content: center;
+
+    height: 511px;
+    width: 1082px;
+    position: fixed;
+    top: 156px;
+    left: 66px;
+    right: 66px;
+}
+
+
+
+
+
+/* 5.1 BACKGROUND IMAGE WITH RIGHT NOTE*/
+section.slide-image-rightnote box {
+    background-color: #1434568c;
+
+    border-left: 8px solid var(--darkmode-accent);
 
     padding-left: 40px;
 
     display: flex;
-    align-items: center;
-    justify-content: left;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
 
     width: 900px;
-    height: 150px;
+    height: auto;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
 
     position: absolute;
     top: 480px;
     left: 330px;
+}
+
+section.slide-image-rightnote h1 {
+    color: #FFFFFF;
+}
+
+section.slide-image-rightnote p {
+    color: #FFFFFF;
+}
+
+
+
+
+/* 5.2 BACKGROUND IMAGE WITH CENTERED NOTE*/
+section.slide-image-centerednote box {
+    background-color: #1434568c;
+
+    /* border-top: 8px solid var(--darkmode-accent); */
+
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: auto;
+
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    left: 150px;
+    right: 150px;
+}
+
+section.slide-image-centerednote h1 {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+section.slide-image-centerednote p {
+    text-align: center;
+    color: #FFFFFF;
 }
 
 
@@ -494,24 +721,24 @@ section.slide-image p {
 
 /* 6. OUTRO SLIDE 1 */
 section.slide-thanks {
-    background-color: var(--dark-background);
+    background-color: var(--darkmode-background);
 }
 
 section.slide-thanks h1 {
-    color: var(--dark-text);
+    color: var(--darkmode-text);
 }
 
 section.slide-thanks h2 {
-    color: var(--dark-text);
+    color: var(--darkmode-text);
 }
 
 section.slide-thanks a {
-    color: var(--dark-text);
+    color: var(--darkmode-text);
 }
 
 section.slide-thanks footer {
-    background-color: var(--dark-accent);
-    color: var(--dark-text);
+    background-color: var(--darkmode-accent);
+    color: var(--darkmode-text);
 }
 
 
@@ -533,7 +760,7 @@ section.slide-video video {
 section.slide-video p {
     background-color: rgba(255, 255, 255, 0.8);
 
-    border-left: 8px solid var(--dark-accent);
+    border-left: 8px solid var(--darkmode-accent);
 
     padding-left: 40px;
 
@@ -547,4 +774,73 @@ section.slide-video p {
     position: absolute;
     top: 480px;
     left: 330px;
+}
+
+
+
+
+
+/* 8. DEMO */
+section.slide-demo {
+    background-color: var(--darkmode-background);
+}
+
+section.slide-demo h1 {
+    color: var(--darkmode-text);
+    width: 1082px;
+    height: 60px;
+
+    position: fixed;
+    left: 88px;
+    top: 38px;
+
+    text-align: left;
+}
+
+section.slide-demo h2 {
+    color: var(--darkmode-text);
+    font-size: 34px;
+    font-weight: 800;
+    width: 1082px;
+    height: 60px;
+
+    position: fixed;
+    left: 88px;
+    top: 90px;
+
+    text-align: left;
+}
+
+section.slide-demo p {
+    color: var(--darkmode-text);
+}
+
+section.slide-demo divline {
+    background-color: var(--darkmode-accent);
+
+    height: 2px;
+    position: fixed;
+
+    top: 135px;
+    left: 66px;
+    right: 66px;
+}
+
+section.slide-demo contentarea {
+    color: var(--darkmode-text);
+    display: flex;
+    flex-direction: column;
+    align-items: start ;
+    justify-content: center;
+
+    height: 511px;
+    width: 1082px;
+    position: fixed;
+    top: 156px;
+    left: 66px;
+    right: 66px;
+}
+
+section.slide-demo li {
+    color: var(--darkmode-text);
 }

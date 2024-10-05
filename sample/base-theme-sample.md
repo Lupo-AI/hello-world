@@ -8,21 +8,57 @@ header: '![lupo](media/logo-dark.png)'
 
 <!-- _class: slide-test-colors 
 _footer: "" 
-_header: "" -->
+_paginate: false -->
 
 <left>
 
-![w:150px](media/logo-dark.png)
-# main text
-## main accent
+<headermockup>
+
+![w:87](media/logo-dark.png)
+
+</headermockup>
+
+![w:150](media/logo-dark.png)
+# light mode text
+## light mode accent
+
+```
+Code example
+```
+
+<footermockup style="background-color: #969696">
+
+<p style="color: #333333"> Footer Text </p>
+
+<p style="color: #333333"> 1 </p>
+
+</footermockup>
 
 </left>
 
 <right>
 
-![w:150px](media/logo-light.png)
-# dark text color
-## dark accent color
+<headermockup>
+
+![w:87](media/logo-light.png)
+
+</headermockup>
+
+![w:150](media/logo-light.png)
+# dark mode text color
+## dark mode accent color
+
+```
+Code example
+```
+
+<footermockup style="background-color: #666666">
+
+<p style="color: #cccccc"> Footer Text </p>
+
+<p style="color: #cccccc"> 1 </p>
+
+</footermockup>
 
 </right>
 

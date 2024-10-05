@@ -19,11 +19,11 @@ img {
     justify-content: center;
 }
 
-/* you can edit from here */
-/* Replace with your font */
+/* You can edit from here */
+/* Replace with your font link */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Roboto+Mono:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
 
-/* Replace with your font and colors */
+/* Replace with your font name and colors */
 :root {
     --primary-font: 'Poppins', sans-serif;
     --secondary-font: 'Nunito', sans-serif;
@@ -31,15 +31,20 @@ img {
 
     --lightmode-background: #FFFFFF;
     --lightmode-text: #333333;
-    --lightmode-accent: #CCCCCC;
+    --lightmode-accent: #969696;
     --darkmode-background: #333333;
     --darkmode-text: #CCCCCC;
     --darkmode-accent: #666666;
+
+    --h1-fontsize: 48px;
+    --h2-h3-fontsize: 44px;
+    --p-fontsiez: 24px;
 }
 
+/* General style setup */
 h1 {
     font-family: var(--primary-font);
-    font-size: 48px;
+    font-size: var(--h1-fontsize);
     font-weight: 700;
     line-height: 120%;
     color: var(--lightmode-text);
@@ -49,7 +54,7 @@ h1 {
 h2,
 h3 {
     font-family: var(--secondary-font);
-    font-size: 44px;
+    font-size: var(--h2-h3-fontsize);
     font-weight: 400;
     line-height: 80%;
     color: var(--lightmode-text);
@@ -58,24 +63,24 @@ h3 {
 
 p {
     font-family: var(--secondary-font);
-    font-size: 24px;
+    font-size: var(--p-fontsize);
     line-height: 100%;
     color: var(--lightmode-text);
 }
 
 li {
     font-family: var(--secondary-font);
-    font-size: 24px;
+    font-size: var(--p-fontsize);
     line-height: 100%;
     color: var(--lightmode-text);
 }
 
 code {
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0);
     border-style: none;
 
     font-family: var(--code-font);
-    font-size: 24px;
+    font-size: var(--p-fontsize);
     color: var(--lightmode-accent);
     line-height: 100%;
     border-radius: 4px;
@@ -83,17 +88,19 @@ code {
 }
 
 pre {
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(185, 185, 185, 0.8);
     border-style: none;
 }
 
 pre code {
     font-family: var(--code-font);
-    font-size: 24px;
+    font-size: var(--p-fontsize);
     color: var(--darkmode-accent);
     line-height: 100%;
     border-radius: 4px;
     overflow-x: auto;
+
+    color: var(--lightmode-text);
 
     width: 100%;
 }
@@ -207,7 +214,7 @@ halfc {
 
 
 
-
+/* Slide Templates */
 /* 0. TEST COLORS */
 section.slide-test-colors left {
     background-color: var(--lightmode-background);
@@ -251,6 +258,52 @@ section.slide-test-colors right {
     position: absolute;
     right: 0;
     top: 0;
+}
+
+section.slide-test-colors footermockup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+    width: 640px;
+    height: 29px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+section.slide-test-colors footermockup p {
+    
+    font-family: var(--primary-font);
+    font-size: 12pt;
+    text-align: right;
+    font-weight: 600;
+    
+    margin-top: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+
+
+
+section.slide-test-colors headermockup {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    
+    width: 640px;
+    height: 29px;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    margin-top: 19px;
+    margin-right: 19px;
 }
 
 section.slide-test-colors right h1 {
@@ -334,8 +387,6 @@ section.slide-onethirdleft-twothirdsright divline {
 }
 
 section.slide-onethirdleft-twothirdsright left {
-    background-color: aqua;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -350,8 +401,6 @@ section.slide-onethirdleft-twothirdsright left {
 }
 
 section.slide-onethirdleft-twothirdsright right {
-    background-color: aqua;
-
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -649,7 +698,7 @@ section.slide-header-subheader-content contentarea {
 section.slide-image-rightnote box {
     background-color: #1434568c;
 
-    border-left: 8px solid var(--darkmode-accent);
+    border-left: 8px solid var(--lightmode-accent);
 
     padding-left: 40px;
 
@@ -682,7 +731,7 @@ section.slide-image-rightnote p {
 
 /* 5.2 BACKGROUND IMAGE WITH CENTERED NOTE*/
 section.slide-image-centerednote box {
-    background-color: #1434568c;
+    background-color: var(--lightmode-accent);
 
     /* border-top: 8px solid var(--darkmode-accent); */
 

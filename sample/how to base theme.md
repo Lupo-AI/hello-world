@@ -36,6 +36,7 @@ Let's start with what you can do in your markdown file.
 
 <contentarea>
 
+- Made of global directives
 - Always the first thing in the .md file
     -   Between dash rulers
 
@@ -79,6 +80,7 @@ backgroundColor: teal-->
 
 **Local Directives**
 
+- A type of directive
 - Applies to:
     - The current slide
     - And following slides
@@ -90,7 +92,7 @@ backgroundColor: teal-->
 <!-- _class: slide-header-halfleft-halfright 
 _backgroundColor: teal-->
 
-This page has a blue background.                        
+This page has a teal background.                        
 
 ---
 
@@ -116,6 +118,7 @@ _backgroundColor: violet-->
 
 **Local Directives**
 
+- A type of directive
 - Applies to:
     - The current slide
     - And following slides
@@ -124,9 +127,9 @@ _backgroundColor: violet-->
 <codetext>
 
 ```
-<!-- backgroundColor: #23B3DB -->
+<!-- backgroundColor: teal -->
 
-This page has a blue background.                         
+This page has a teal background.                         
 
 ---
 
@@ -141,6 +144,7 @@ The second page also has same color.
 
 **Spot Directives**
 
+- A type of *local* directive
 - Applies to
     - **ONLY** the current slide 
 - Must be written as a comment but with an underscore
@@ -165,6 +169,43 @@ The second page would not apply setting of directives.
 You can use "spot directives" if you want to apply it only to the slide you are corrently on, it's the same to "local directives" but with an underscore at the beginning.
 In this case you can see that we used underscore "background color" colon violet, which makes only this slide color violet, the next slides will go back to color teal.
 -->
+
+---
+<!-- _class: slide-definition -->
+
+# Why does this slide is still color Teal?
+
+The violet was a spot directive, it only affected the previous slide.
+We used a local directive to set it to Teal, which affects all the slides from that one on.
+
+
+<!-- 
+But, wait a moment, why does this slide has a teal background color?
+
+The violet was a spot directive, it only affected the previous slide. And, we used a local two slides back setting the background color to Teal, which affects all the slides from that one on.
+-->
+
+
+---
+<!-- _class: slide-header-content 
+backgroundColor: "" -->
+
+# Let's fix it
+
+<contentarea>
+
+<codetext>
+
+```
+<!-- backgroundColor: "" -->                  
+```
+
+</codetext>
+
+</contentarea>
+
+
+<!-- Let's fix it using a local directive again and setting the background color to empty double qoutes, the same trick if you want to remove the footer or header -->
 
 ---
 <!-- _class: slide-header-onethirdleft-twothirdsright -->
@@ -235,7 +276,9 @@ Also, instead of using background colors, you could use a background image for a
 -->
 
 ---
-<!-- _class: slide-cover -->
+<!-- 
+_class: slide-cover
+-->
 
 # The Templates
 

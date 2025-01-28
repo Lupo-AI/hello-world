@@ -1,4 +1,4 @@
-name: Generate Course with Lupo
+name: Generate Course with Lupo (v3_pptx)
 on:
   workflow_dispatch:
 jobs:
@@ -9,7 +9,7 @@ jobs:
         run: |
           curl -L -X POST http://20.55.39.142:5000/api/action \
           -H "Content-Type: application/json" \
-          -d '{"repo":"'$repo'","branch":"'$branch'","actor":"'$actor'"}'
+          -d '{"repo":"'$repo'","branch":"'$branch'","actor":"'$actor'","lupo_version":"pptx_v3"}'
         env:
           repo: ${{ github.repository }}
           branch: ${{ github.ref }}
